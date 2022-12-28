@@ -52,3 +52,11 @@ kn49.fit(fish_data, fish_target)
 kn49.score(fish_data, fish_target)
 
 print(35/49)
+
+for n in range(5, 50) :
+    kn.n_neighbors = n
+    score = kn.score(fish_data, fish_target)
+
+    if score < 1:
+        print(n, score)
+        break
